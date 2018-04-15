@@ -1,0 +1,31 @@
+<!-- -->
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon> 
+    </button>
+    <ion-title>
+      <strong>My Smart Home</strong>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button tappable (click)="presentNotifications($event)">
+        <ion-icon name="notifications"></ion-icon>
+      </button>
+      <button ion-button tappable (click)="goToAccount()">
+        <ion-icon name="cog"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding class="animated fadeIn common-bg card-background-page">
+  
+  <ion-item>
+      <ion-label>Light 1</ion-label>
+      <ion-toggle checked="true" [(ngModel)]="lightOnOrOff" (ionChange)="controlLight()" ></ion-toggle>
+    </ion-item>
+
+ 
+</ion-content>
